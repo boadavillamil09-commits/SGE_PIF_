@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analizador Visual</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+
+            <h1>Analizador Visual</h1>
+
+            <p>
+                Análisis de imagen, objetos y composición cromática
+            </p>
+
+        </header>
+
+
+        <section class="upload-card">
+
+            <label for="imageInput">
+                Seleccionar imagen
+            </label>
+
+            <input
+                id="imageInput"
+                type="file"
+                accept=".jpg,.jpeg,.png,.webp,.bmp"
+            >
+
+            <button id="analyzeButton">
+                Analizar imagen
+            </button>
+
+        </section>
+
+
+        <section
+            id="loading"
+            class="hidden"
+        >
+            Analizando imagen...
+        </section>
+
+
+        <section
+            id="results"
+            class="hidden"
+        >
+
+            <div class="top-grid">
+
+                <article class="card">
+
+                    <h2>Imagen</h2>
+
+                    <div class="image-container">
+
+                        <img
+                            id="preview"
+                            alt="Imagen seleccionada"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h2>Análisis de imagen</h2>
+
+                    <div
+                        id="imageAnalysis"
+                        class="analysis-grid"
+                    ></div>
+
+                    <h3>Objetos detectados</h3>
+
+                    <div
+                        id="objects"
+                    ></div>
+
+                </article>
+
+            </div>
+
+
+            <article class="card colors-card">
+
+                <h2>Análisis cromático</h2>
+
+                <div class="color-summary">
+
+                    <div>
+
+                        <span>
+                            Temperatura
+                        </span>
+
+                        <strong
+                            id="temperature"
+                        ></strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Color promedio
+                        </span>
+
+                        <strong
+                            id="averageColor"
+                        ></strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="palette"
+                    class="palette"
+                ></div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
